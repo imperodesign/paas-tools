@@ -1,5 +1,7 @@
 # Impero PaaS Tools
 
+> CAUTION: FOR REAL DEV/OPS ONLY!
+
 This repo contains everything you need to:
 - set up the Impero PaaS infrastructure from scratch on [AWS]()
 - update Impero PaaS infrastructure
@@ -22,7 +24,7 @@ This folder contain deis units.
 
 ### [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
 ### Update Impero PaaS infrastructure (coming soon)
-### [Create, deploy, and destroy an application](manage_application.md) 
+### [Create, deploy, and destroy an application](manage_application.md)
 
 ## References
 - [Deis](http://deis.io/) - Open source PaaS that makes it easy to deploy and manage applications on your own servers
