@@ -140,4 +140,4 @@ Logged out as impero
 Please read [this](http://docs.deis.io/en/latest/managing_deis/configure-dns/#configure-dns).
 
 #### Configure the Load Balancer
-please read [this](http://docs.deis.io/en/latest/managing_deis/configure-load-balancers/).
+Please read [this](http://docs.deis.io/en/latest/managing_deis/configure-load-balancers/).
