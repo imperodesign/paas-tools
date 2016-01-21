@@ -99,3 +99,37 @@ Once finished, run this command to provision the Deis platform, and go to make a
 ```sh
 deisctl install platform && deisctl start platform
 ```
+
+##### Create the superuser
+```sh
+$ deis register http://deis.example.com
+# username: impero
+# password:
+# password (confirm):
+# email: devs@imperodesign.com
+# Registered impero
+# Logged in as impero
+```
+
+#### Upload superuser SSH Public Key
+First create a superuser SSH key (make a copy and store it in a safe place)
+```sh
+$ ssh-keygen -t rsa -b 4096 -C "devs@imperodesign.com"
+# Enter file in which to save the key (/Users/jacopodaeli/.ssh/id_rsa): impero_deis_rsa
+```
+then upload it
+```sh
+deis keys:add
+# Found the following SSH public keys:
+# 1) id_rsa.pub
+# 2) impero_deis_rsa.pub
+# ...
+# Which would you like to use with Deis? 2
+# Uploading /Users/myuser/.ssh/impero_deis_rsa.pub to Deis... done
+```
+
+#### Logout from a controller
+```sh
+$ deis logout
+Logged out as impero
+```
