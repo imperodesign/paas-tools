@@ -1,7 +1,7 @@
 # Impero PaaS Tools
 
 This repo contains everything you need to:
-- set up Impero PaaS infrastructure from scratch
+- set up the Impero PaaS infrastructure from scratch
 - update Impero PaaS infrastructure
 - create, deploy, and destroy an application
 
@@ -15,9 +15,13 @@ This folder contains `deis` and `deisctl` binary app. `deis` is a “dev” tool
 ### deis
 This folder contain the infrastructure provisioning files, both for staging and production clusters.
 
-
 ## References
-- [Deis]() - Open source PaaS that makes it easy to deploy and manage applications on your own servers
-- [CoreOS]() - Minimal operating system that supports popular container systems out of the box
-- [fleet]() - A scheduling backend included with CoreOS
-- [PostgreSQL](http://www.postgresql.org/)
+- [Deis](http://deis.io/) - Open source PaaS that makes it easy to deploy and manage applications on your own servers
+- [CoreOS](https://coreos.com/) - Minimal operating system that supports popular container systems out of the box
+- [Fleet](https://github.com/coreos/fleet) - A scheduling backend included with CoreOS
+- [Docker](https://www.docker.com/) - Containers wrap up a piece of software in a complete filesystem
+- [PostgreSQL](http://www.postgresql.org/) - Object-relational database system
+- [Git](https://git-scm.com/) - Distributed version control system
+- [Ceph](http://ceph.com/) - Distributed object store and file system designed to provide excellent performance, reliability and scalability
+- [Nginx](http://nginx.org/) - HTTP and reverse proxy server
+- [Logspout](https://github.com/gliderlabs/logspout) - Log routing for Docker container logs
