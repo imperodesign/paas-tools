@@ -18,7 +18,11 @@ This folder contain the infrastructure provisioning files, both for staging and 
 ### .deis
 This folder contain deis units.
 
-## [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
+## Readings
+
+### [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
+### Update Impero PaaS infrastructure (coming soon)
+### [Create, deploy, and destroy an application](manage_application.md) 
 
 ## References
 - [Deis](http://deis.io/) - Open source PaaS that makes it easy to deploy and manage applications on your own servers
