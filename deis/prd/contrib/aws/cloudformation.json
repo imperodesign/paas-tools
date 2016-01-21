@@ -1,0 +1,18 @@
+[
+    {
+        "ParameterKey":     "KeyPair",
+        "ParameterValue":   "deis"
+    },
+    {
+        "ParameterKey":     "InstanceType",
+        "ParameterValue":   "m3.xlarge"
+    },
+    {
+        "ParameterKey":     "RootVolumeSize",
+        "ParameterValue":   "100"
+    },
+    {
+        "ParameterKey":     "DockerVolumeSize",
+        "ParameterValue":   "1000"
+    }
+]
