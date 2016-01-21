@@ -13,7 +13,7 @@ if [ "$DEIS_USERNAME" = "" ]; then
 fi
 
 if [ "$DEIS_PASSWORD" = "" ]; then
-  echo "DEIS_USERNAME must be set."
+  echo "DEIS_PASSWORD must be set."
   exit;
 fi
 

@@ -2,38 +2,16 @@
 
 export APP_NAME=
 
+./login $1
 
-echo "[PRD] LOGOUT"
+if [ "$1" = "prd" ]; then
+  echo "Deploying to production"
+  git push deis-prd master
+else
+  echo "Deploying to staging"
+  git push deis-stg development
+fi
+
+# Logout
+echo "LOGOUT"
 deis logout
-
-# Login to production
-echo "[PRD] LOGIN"
-deis auth:login --username=$DEIS_USERNAME --password=$DEIS_PASSWORD deis.$DEIS_PRD_URL
-
-# Create app in production
-echo "[PRD] CREATE"
-deis apps:create $APP_NAME --no-remote
-
-# Add git remote in production
-echo "[PRD] ADD GIT REMOTE"
-git remote add deis-prd ssh://git@deis.$DEIS_PRD_URL:2222/$APP_NAME.git
-
-# Setup env vars in production
-echo "[PRD] SET ENV VARS"
-echo "Missing implementation... Skip."
-
-# Login to staging
-echo "[STG] LOGIN"
-deis auth:login --username=$DEIS_USERNAME --password=$DEIS_PASSWORD deis.$DEIS_STG_URL
-
-# Create app in production
-echo "[STG] CREATE"
-deis apps:create $APP_NAME --no-remote
-
-# Add git remote in production
-echo "[STG] ADD GIT REMOTE"
-git remote add deis-stg ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
-
-# Setup env vars in production
-echo "[STG] SET ENV VARS"
-echo "Missing implementation... Skip."
