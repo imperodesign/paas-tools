@@ -3,11 +3,11 @@
 > CAUTION: FOR REAL DEV/OPS ONLY!
 
 This repo contains everything you need to:
-- set up the Impero PaaS infrastructure from scratch on [AWS]()
+- set up the Impero PaaS infrastructure from scratch on [AWS](https://aws.amazon.com/)
 - update Impero PaaS infrastructure
 - create, deploy, and destroy an application
 
-Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/)
+Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/) and [AWS](https://aws.amazon.com/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/).
 
 ## Architecture
 <img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
