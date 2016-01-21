@@ -9,6 +9,9 @@ This repo contains everything you need to:
 
 Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/)
 
+## Architecture
+<img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
+
 ## Repository Organisation
 
 ### bin

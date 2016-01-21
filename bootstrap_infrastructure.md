@@ -133,3 +133,9 @@ deis keys:add
 $ deis logout
 Logged out as impero
 ```
+
+#### Configure the DNS
+Please read [this](http://docs.deis.io/en/latest/managing_deis/configure-dns/#configure-dns).
+
+#### Configure the Load Balancer
+please read [this](http://docs.deis.io/en/latest/managing_deis/configure-load-balancers/).
