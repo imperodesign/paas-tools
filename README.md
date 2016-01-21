@@ -9,22 +9,6 @@ This repo contains everything you need to:
 
 Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/)
 
-## Before starting
-First of all clone this repository
-```sh
-$ git clone https://github.com/imperodesign/paas-tools.git ~/.paas-tools
-```
-and install the binaries
-```
-cd ~/.paas-tools/installers
-
-$ sh install_deisctl.sh -s 1.12.2
-$ sudo ln -fs $PWD/deisctl /usr/local/bin/deisctl
-
-$ sh install_deis.sh
-$ ln -fs $PWD/deis /usr/local/bin/deis
-```
-
 ## Architecture
 <img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
 More details [here](http://docs.deis.io/en/latest/understanding_deis/architecture/).

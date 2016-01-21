@@ -1,7 +1,8 @@
 ## Bootstrap from scratch the infrastructure on AWS
 
 ### Prerequisites
-You need `python`, `pip`, `git`, and `make` installed. You also need a valid AWS credential.
+Please be sure you have `python`, `pip`, `git`, and `make` installed.
+You also need to [install deis tools](install_tools.md).
 
 #### Install
 In order to start working with Amazon’s API, let’s install [awscli](https://aws.amazon.com/cli/):
@@ -14,6 +15,7 @@ $ pip install pyyaml
 ```
 
 #### Configure aws-cli
+> You  need a valid AWS credential
 ```sh
 $ aws configure
 # AWS Access Key ID [None]: ***************
