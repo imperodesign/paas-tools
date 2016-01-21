@@ -15,7 +15,7 @@ $ pip install pyyaml
 ```
 
 #### Configure aws-cli
-> You  need a valid AWS credential
+IMPORTANT: you  need a valid AWS credential.
 ```sh
 $ aws configure
 # AWS Access Key ID [None]: ***************
