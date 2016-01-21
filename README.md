@@ -13,6 +13,9 @@ Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructur
 <img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
 More details [here](http://docs.deis.io/en/latest/understanding_deis/architecture/).
 
+### Components
+Deis consists of a number of components that combine to create a distributed PaaS. Each Deis component is deployed as a container or set of containers. The components are: Controller, Database, Builder, Registry, Logspout, Logger, Publisher, Router, Store.
+
 ### Three nodes cluster failover
 
 #### Losing One of Three Nodes
