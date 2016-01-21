@@ -16,7 +16,7 @@ More details [here](http://docs.deis.io/en/latest/understanding_deis/architectur
 ### Components
 Deis consists of a number of components that combine to create a distributed PaaS. Each Deis component is deployed as a container or set of containers. The components are: Controller, Database, Builder, Registry, Logspout, Logger, Publisher, Router, Store.
 
-### Three nodes cluster failover
+### Three nodes cluster (impero default) failover
 
 #### Losing One of Three Nodes
 Losing one of three nodes will have the following effects:
