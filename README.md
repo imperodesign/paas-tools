@@ -11,6 +11,22 @@ Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructur
 
 ## Architecture
 <img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
+More details [here](http://docs.deis.io/en/latest/understanding_deis/architecture/).
+
+### Three nodes cluster failover
+
+#### Losing One of Three Nodes
+Losing one of three nodes will have the following effects:
+Ceph will enter a health warn state but will continue to function.
+Anything scheduled on the downed node will be rescheduled to the other two nodes. If your remaining nodes don’t have the resources to run the new units, this could take down the entire platform
+When you scale up to three nodes again, Ceph and Etcd will still think one member is down. You will need to manually remove the downed node from Ceph and Etcd.
+
+#### Losing Two of Three Nodes
+Losing two of three nodes will have the following effects:
+Ceph will enter a degraded state and go into read-only mode.
+Etcd will enter a degraded state and go into read-only mode.
+Anything scheduled on the downed node will be rescheduled to remaining node. If your remaining node doesn’t have the resources to run the new units, this could take down the entire platform.
+When you scale up to three nodes again, Ceph and Etcd will still think two members are down. You will need to manually remove the downed nodes from Ceph and Etcd.
 
 ## Repository Organisation
 
