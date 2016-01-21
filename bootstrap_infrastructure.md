@@ -90,7 +90,7 @@ then add the `deis` SSH key to Deis so it can connect to remote hosts
 ```sh
 $ deisctl config platform set sshPrivateKey=~/.ssh/deis
 ```
-and finally tell the controller which domain name we are deploying applications under
+and finally tell the controller which domain name we are deploying applications under.
 ```sh
 $ deisctl config platform set domain=example.com
 # prd.paas.impero.me / stg.paas.impero.me
