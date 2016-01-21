@@ -115,7 +115,7 @@ $ deis register http://deis.example.com
 First create a superuser SSH key (make a copy and store it in a safe place)
 ```sh
 $ ssh-keygen -t rsa -b 4096 -C "devs@imperodesign.com"
-# Enter file in which to save the key (/Users/jacopodaeli/.ssh/id_rsa): impero_deis_rsa
+# Enter file in which to save the key (/Users/jacopodaeli/.ssh/id_rsa): /Users/jacopodaeli/.ssh/impero_deis_rsa
 ```
 then upload it
 ```sh
