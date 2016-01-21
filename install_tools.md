@@ -1,4 +1,4 @@
-## Install the Tools
+## Install Deis tools
 
 ### Clone the repo
 ```sh
