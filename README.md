@@ -9,6 +9,21 @@ This repo contains everything you need to:
 
 Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/) and [AWS](https://aws.amazon.com/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/).
 
+## A brief of what we use at Impero
+
+### The infrastructure
+At Impero we have an infrastructure basically composed of two Deis clusters, two MongoDB Replica Set, two PostgreSQL and two AWS Aurora databases, one of each for `production` and `staging`. Our staging resources are of course reduced at the minimum.
+Since Deis is a multi-host clustered PaaS, we can easily scale up when we are running out of resourced on the cluster.
+
+### Logging and Data Analysis
+We use a combination of [Sentry](https://getsentry.com/welcome/), [Sumologic](https://www.sumologic.com/) and [Papertrail](https://papertrailapp.com) for logging and data analysis.
+
+### Applications workflow
+Every git repository has two branches `master` and `development`, `production` and `staging` respectively.
+The idea of the flow is the following:
+
+`checkout development` -> `app changes` -> `local tests` -> `commit` ->` push development` -> `CI tests` -> `staging deployment` -> `user tests` -> `merge development into master` -> `local tests` -> `push master` -> `CircleCI tests` -> `production deployment` -> `final user tests`
+
 ## Architecture
 <img src="http://docs.deis.io/en/latest/_images/DeisSystemDiagram.png" alt="Architecture" />
 More details [here](http://docs.deis.io/en/latest/understanding_deis/architecture/).
@@ -43,7 +58,7 @@ This folder contain deis units.
 This folder contains `install_deis.sh` and `install_deisctl.sh` to install `deis` and `deisctl` respectively. `deis` is a “dev” tool, used to deploy and scale applications to a Deis platform. `deisctl` is an “ops” tool, used to configure and manage the Deis platform itself.
 
 ### scripts
-Scripts helpers for PaaS application management. See [instructions](scripts/README.md). 
+Scripts helpers for PaaS application management. See [instructions](scripts/README.md).
 
 ### dockerfiles
 Blank dockerfiles to use with your web app.
