@@ -1,4 +1,4 @@
-## Databases
+## Bootstrap from scratch the databases
 IMPERO infrastructure has the following databases available for web apps usage:
 - PostgreSQL
 - Aurora

@@ -67,7 +67,7 @@ Blank dockerfiles to use with your web app.
 
 ### [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
 ### Update Impero PaaS infrastructure (coming soon)
-### [Databases](databases.md)
+### [Bootstrap from scratch the databases](databases.md)
 ### [Create, deploy, and destroy an application](manage_application.md)
 
 ## References
