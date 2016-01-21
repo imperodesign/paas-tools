@@ -54,9 +54,7 @@ aws ec2 import-key-pair --key-name deis --public-key-material file://~/.ssh/deis
 To build the production cluster go to `deis/prd`, for the staging one go to `deis/stg`.
 ```sh
 cd deis/prd
-```
-or
-```sh
+# or
 cd deis/stg
 ```
 
