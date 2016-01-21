@@ -1,4 +1,4 @@
-## [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
+## Bootstrap from scratch the infrastructure on AWS
 
 ### Prerequisites
 You need `python`, `pip` and `make` installed. You also need a valid AWS credential.
