@@ -45,6 +45,9 @@ This folder contains `install_deis.sh` and `install_deisctl.sh` to install `deis
 ### scripts
 Scripts helpers for PaaS application management.
 
+### dockerfiles
+Blank dockerfiles to use with your web app.
+
 ## Readings
 
 ### [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
