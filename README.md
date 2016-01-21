@@ -33,8 +33,8 @@ When you scale up to three nodes again, Ceph and Etcd will still think two membe
 
 ## Repository Organisation
 
-### bin
-This folder contains `deis` and `deisctl` binary app. `deis` is a “dev” tool, used to deploy and scale applications to a Deis platform. `deisctl` is an “ops” tool, used to configure and manage the Deis platform itself.
+### installers
+This folder contains `install_deis.sh` and `install_deisctl.sh` to install `deis` and `deisctl` respectively. `deis` is a “dev” tool, used to deploy and scale applications to a Deis platform. `deisctl` is an “ops” tool, used to configure and manage the Deis platform itself.
 
 ### deis
 This folder contain the infrastructure provisioning files, both for staging and production clusters.
