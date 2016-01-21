@@ -45,9 +45,22 @@ Generate an admin `deis` ssh key (and store this in a safe place):
 ```sh
 ssh-keygen -q -t rsa -f ~/.ssh/deis -N '' -C deis
 ```
-and then upload it on AWS
-```
+then upload it on AWS
+```sh
 aws ec2 import-key-pair --key-name deis --public-key-material file://~/.ssh/deis.pub
+```
+then add it to your SSH agent
+```sh
+ssh-add ~/.ssh/deis
+```
+If your SSH agent is not running, run:
+```sh
+$ `eval `ssh-agent -s`
+```
+
+#### Link Deis units
+```
+ln -s $(pwd)/Devs ~/.deis
 ```
 
 #### Build the cluster
@@ -84,6 +97,25 @@ $ ./provision-aws-cluster.sh <stack-name>
 # ...
 # Your Deis cluster has been successfully deployed to AWS CloudFormation and is started.
 # ...
+```
+
+##### Install Deis platform
+Find the public IP address of one of your nodes, and export it to the DEISCTL_TUNNEL environment variable
+```sh
+$ export DEISCTL_TUNNEL=xxx.xxx.xxx.xxx
+```
+then add the `deis` SSH key to Deis so it can connect to remote hosts
+```sh
+$ deisctl config platform set sshPrivateKey=~/.ssh/deis
+```
+and finally tell the controller which domain name we are deploying applications under
+```sh
+$ deisctl config platform set domain=example.com
+# prd.paas.impero.me / stg.paas.impero.me
+```
+Once finished, run this command to provision the Deis platform, and go to make a coffe (it takes 5-10 minutes):
+```sh
+deisctl install platform && deisctl start platform
 ```
 
 ## References
