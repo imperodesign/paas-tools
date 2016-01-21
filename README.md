@@ -9,7 +9,7 @@ This repo contains everything you need to:
 
 Impero [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) infrastructure is built on top of [Deis](http://deis.io/) and [AWS](https://aws.amazon.com/). Read more about [Deis components](http://docs.deis.io/en/latest/understanding_deis/components/).
 
-## A brief of whatafuck we use at Impero
+## A brief of whattafuck we use at Impero
 
 ### The infrastructure
 At Impero we have an infrastructure basically composed of two Deis clusters, two MongoDB Replica Set, two PostgreSQL and two AWS Aurora databases, one of each for `production` and `staging`. Our staging resources are of course reduced at the minimum.
