@@ -36,7 +36,7 @@ else
 
   # Add git remote in production
   echo "[STG] ADD GIT REMOTE"
-  git remote add deis-prd ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
+  git remote add deis-stg ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
 
   # Setup env vars in production
   echo "[STG] SET ENV VARS"
