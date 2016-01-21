@@ -46,6 +46,7 @@ This folder contain deis units.
 
 ### [Bootstrap from scratch the infrastructure on AWS](bootstrap_infrastructure.md)
 ### Update Impero PaaS infrastructure (coming soon)
+### [Databases](databases.md)
 ### [Create, deploy, and destroy an application](manage_application.md)
 
 ## References
