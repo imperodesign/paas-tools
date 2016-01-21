@@ -4,16 +4,6 @@
 You need `python`, `pip`, `git`, and `make` installed. You also need a valid AWS credential.
 
 #### Install
-First of all clone this repository
-```sh
-$ git clone https://github.com/imperodesign/paas-tools.git ~/.paas-tools
-```
-and install the binaries
-```
-cd ~/.paas-tools/installers
-sh install_deis.sh
-$ ln -fs $PWD/deis /usr/local/bin/deis
-```
 In order to start working with Amazon’s API, let’s install [awscli](https://aws.amazon.com/cli/):
 ```
 $ pip install awscli
