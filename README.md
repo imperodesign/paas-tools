@@ -15,6 +15,9 @@ This folder contains `deis` and `deisctl` binary app. `deis` is a “dev” tool
 ### deis
 This folder contain the infrastructure provisioning files, both for staging and production clusters.
 
+### .deis
+This folder contain deis units.
+
 
 ## Bootstrap from scratch the infrastructure on AWS
 
