@@ -19,5 +19,3 @@ $ sudo ln -fs $PWD/deisctl /usr/local/bin/deisctl
 $ curl -sSL http://deis.io/deis-cli/install.sh | sh
 $ ln -fs $PWD/deis /usr/local/bin/deis
 ```
-
-You ready

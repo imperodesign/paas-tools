@@ -7,62 +7,42 @@ if [ "$APP_NAME" = "" ]; then
   exit;
 fi
 
-if [ "$DEIS_USERNAME" = "" ]; then
-  echo "DEIS_USERNAME must be set."
-  exit;
-fi
-
-if [ "$DEIS_PASSWORD" = "" ]; then
-  echo "DEIS_PASSWORD must be set."
-  exit;
-fi
-
-if [ "$DEIS_PRD_URL" = "" ]; then
-  echo "DEIS_PRD_URL must be set."
-  exit;
-fi
-
-if [ "$DEIS_STG_URL" = "" ]; then
-  echo "DEIS_STG_URL must be set."
-  exit;
-fi
-
 # Eventually logout from a controller
 echo "LOGOUT"
 deis logout
 
-# Create app in production
-echo "[PRD] CREATE"
-deis apps:create $APP_NAME --no-remote
+./login $1
 
-# Add git remote in production
-echo "[PRD] ADD GIT REMOTE"
-git remote add deis-prd ssh://git@deis.$DEIS_PRD_URL:2222/$APP_NAME.git
+if [ "$1" = "prd" ]; then
+  # Create app in production
+  echo "[PRD] CREATE"
+  deis apps:create $APP_NAME --no-remote
 
-# Setup env vars in production
-echo "[PRD] SET ENV VARS"
-echo "Missing implementation... Skip."
+  # Add git remote in production
+  echo "[PRD] ADD GIT REMOTE"
+  git remote add deis-prd ssh://git@deis.$DEIS_PRD_URL:2222/$APP_NAME.git
 
-# Logout from prd controller
-echo "[PRD] LOGOUT"
-deis logout
+  # Setup env vars in production
+  echo "[PRD] SET ENV VARS"
+  echo "Missing implementation... Skip."
 
-# Login to staging
-echo "[STG] LOGIN"
-deis auth:login --username=$DEIS_USERNAME --password=$DEIS_PASSWORD deis.$DEIS_STG_URL
+  # Logout from prd controller
+  echo "[PRD] LOGOUT"
+  deis logout
+else
+  # Create app in production
+  echo "[STG] CREATE"
+  deis apps:create $APP_NAME --no-remote
 
-# Create app in production
-echo "[STG] CREATE"
-deis apps:create $APP_NAME --no-remote
+  # Add git remote in production
+  echo "[STG] ADD GIT REMOTE"
+  git remote add deis-prd ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
 
-# Add git remote in production
-echo "[STG] ADD GIT REMOTE"
-git remote add deis-prd ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
+  # Setup env vars in production
+  echo "[STG] SET ENV VARS"
+  echo "Missing implementation... Skip."
 
-# Setup env vars in production
-echo "[STG] SET ENV VARS"
-echo "Missing implementation... Skip."
-
-# Logout from stg controller
-echo "[STG] LOGOUT"
-deis logout
+  # Logout from stg controller
+  echo "[STG] LOGOUT"
+  deis logout
+fi
