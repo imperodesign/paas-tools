@@ -7,8 +7,6 @@ if [ "$APP_NAME" = "" ]; then
   exit;
 fi
 
-./login $1
-
 if [ "$1" = "prd" ]; then
   echo "Deploying to production"
   git push deis-prd master

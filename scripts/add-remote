@@ -1,0 +1,32 @@
+#!/bin/bash
+
+export APP_NAME=
+
+if [ "$APP_NAME" = "" ]; then
+  echo "APP_NAME must be set."
+  exit;
+fi
+
+if [ "$1" = "prd" ]; then
+  if [ "$DEIS_PRD_URL" = "" ]; then
+    echo "DEIS_PRD_URL must be set."
+    exit;
+  fi
+
+  # Add git remote in production
+  echo "Adding production remote"
+  git remote add deis-prd ssh://git@deis.$DEIS_PRD_URL:2222/$APP_NAME.git
+else
+  if [ "$DEIS_STG_URL" = "" ]; then
+    echo "DEIS_STG_URL must be set."
+    exit;
+  fi
+
+  # Add git remote in staging
+  echo "Adding staging remote"
+  git remote add deis-stg ssh://git@deis.$DEIS_STG_URL:2222/$APP_NAME.git
+fi
+
+# Logout
+echo "LOGOUT"
+deis logout

@@ -11,7 +11,6 @@ if [ "$DEIS_PASSWORD" = "" ]; then
 fi
 
 if [ "$1" = "prd" ]; then
-
   if [ "$DEIS_PRD_URL" = "" ]; then
     echo "DEIS_PRD_URL must be set."
     exit;
