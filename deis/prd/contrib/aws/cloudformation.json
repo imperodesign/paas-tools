@@ -13,6 +13,6 @@
     },
     {
         "ParameterKey":     "DockerVolumeSize",
-        "ParameterValue":   "200"
+        "ParameterValue":   "100"
     }
 ]
