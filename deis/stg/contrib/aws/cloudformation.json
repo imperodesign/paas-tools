@@ -5,6 +5,6 @@
     },
     {
     "ParameterKey":     "InstanceType",
-    "ParameterValue":   "m4.large"
+    "ParameterValue":   "m3.medium"
     }
 ]
