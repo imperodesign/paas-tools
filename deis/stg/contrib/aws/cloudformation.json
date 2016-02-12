@@ -2,5 +2,9 @@
     {
         "ParameterKey":     "KeyPair",
         "ParameterValue":   "deis"
+    },
+    {
+    "ParameterKey":     "InstanceType",
+    "ParameterValue":   "m4.large"
     }
 ]
