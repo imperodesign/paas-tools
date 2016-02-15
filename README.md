@@ -55,7 +55,7 @@ This folder contain the infrastructure provisioning files, both for staging and 
 This folder contain deis units.
 
 ### bin
-This folder will contain `deis` and `deisctl` respectively. `deis` is a “dev” tool, used to deploy and scale applications to a Deis platform. `deisctl` is an “ops” tool, used to configure and manage the Deis platform itself.
+This folder has been created to contain `deis` and `deisctl` respectively. `deis` is a “dev” tool, used to deploy and scale applications to a Deis platform. `deisctl` is an “ops” tool, used to configure and manage the Deis platform itself.
 
 ### scripts
 Scripts helpers for PaaS application management. See [instructions](scripts/README.md).
