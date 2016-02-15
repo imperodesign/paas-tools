@@ -7,8 +7,6 @@ $ git clone https://github.com/imperodesign/paas-tools.git ~/.paas-tools
 
 ### Install the binaries
 ```
-cd ~/.paas-tools/installers
-
 $ cd ~/.paas-tools/bin
 
 # Install deisctl
